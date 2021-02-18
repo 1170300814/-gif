@@ -78,7 +78,7 @@ print(left,top,right,bottom)
 
 
 
-for i in range(20):
+for i in range(20): #这里改照片张数
     time.sleep(0.1)
     imgs.append(ImageGrab.grab(rect))  # 屏幕截图
     print("Catch  IMG_" + str(i + 1) + " OK")  # 显示进度
@@ -89,6 +89,6 @@ for i, img in enumerate(imgs):
     frames.append(img)  # 批量化
     print(str(i) + " OK")
 
-imageio.mimsave("150%.gif", frames, 'GIF', duration=0.1)  # 转为GIF
+imageio.mimsave("150%.gif", frames, 'GIF', duration=0.1)  # 转为GIF  这里改每一张图片的持续时间
 print("-----------------DONE!-----------------")
 
